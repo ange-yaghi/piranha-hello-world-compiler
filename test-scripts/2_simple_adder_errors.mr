@@ -1,0 +1,8 @@
+node adder_node {
+    input a;
+    input b;
+    output c: a + b;
+    output d: fake;
+}
+
+adder_node(1, 2, 3)

@@ -1,0 +1,3 @@
+public node int_channel => int_channel { 
+    /* void */ 
+}

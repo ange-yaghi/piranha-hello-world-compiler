@@ -1,0 +1,7 @@
+node adder_node {
+    input a;
+    input b;
+    output c: a + b;
+}
+
+adder_node(1, 2)
