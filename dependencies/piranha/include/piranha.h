@@ -1,4 +1,4 @@
-// Auto-generated on: 2019-08-15 13:35:48.195586
+// Auto-generated on: 2019-08-17 17:16:15.934101
 
 #ifndef PIRANHA_PIRANHA_H
 #define PIRANHA_PIRANHA_H
@@ -8,6 +8,7 @@
 #include "include/add_operation_output.h"
 #include "include/assembly.h"
 #include "include/bool_negate_operation.h"
+#include "include/channel_node.h"
 #include "include/channel_type.h"
 #include "include/compilation_error.h"
 #include "include/compiler.h"
@@ -30,6 +31,7 @@
 #include "include/ir_compilation_unit.h"
 #include "include/ir_context_tree.h"
 #include "include/ir_import_statement.h"
+#include "include/ir_literal_node.h"
 #include "include/ir_node.h"
 #include "include/ir_node_definition.h"
 #include "include/ir_parser_structure.h"

@@ -1,0 +1,5 @@
+private import "../compiler-lib/compiler_lib.mr"
+
+auto node test {
+    output some_int: 15;
+}

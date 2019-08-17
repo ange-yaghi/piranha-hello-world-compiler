@@ -1,0 +1,12 @@
+private import "../compiler-lib/compiler_lib.mr"
+
+node convert_to_int {
+    input value [int_channel];
+    alias output converted: value;
+}
+
+auto node main {
+    convert_to_int s("5")
+
+    print_int(s + 1)
+}

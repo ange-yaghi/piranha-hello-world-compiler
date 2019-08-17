@@ -358,3 +358,6 @@ autogen/
 
 # Ignore temp files added by flex
 project/mantaray/~flex*
+
+# Ignore Piranha assembly files
+*.pasm

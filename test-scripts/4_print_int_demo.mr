@@ -1,0 +1,7 @@
+private import "../compiler-lib/compiler_lib.mr"
+
+auto node main {
+    print_int(1)
+    print_int(2)
+    print_int(3)
+}

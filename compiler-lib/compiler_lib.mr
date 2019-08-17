@@ -1,3 +1,30 @@
 public node int_channel => int_channel { 
     /* void */ 
 }
+
+public node string_channel => string_channel {
+    /* void */
+}
+
+public node literal_int => literal_int {
+    alias output __out [int_channel];
+}
+
+public node literal_string => literal_string {
+    alias output __out [string_channel];
+}
+
+public node print_int => print_int {
+    input value [int_channel]: 0;
+}
+
+public node int_add => int_add {
+    input __in0 [int_channel];
+    input __in1 [int_channel];
+    alias output __out [int_channel];
+}
+
+public node string_to_int => string_to_int {
+    input __in [string_channel];
+    alias output __out [int_channel];
+}

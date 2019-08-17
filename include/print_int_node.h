@@ -13,7 +13,11 @@ protected:
         int data;
         static_cast<piranha::IntValueOutput *>(m_integerInput)->fullCompute((void *)&data);
 
+        std::cout << "Integer value: " << data << std::endl;
+    }
 
+    virtual void registerInputs() {
+        registerInput(&m_integerInput, "value");
     }
 
 protected:
