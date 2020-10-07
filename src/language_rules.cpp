@@ -37,7 +37,7 @@ void LanguageRules::registerBuiltinNodeTypes() {
 
     // Operations =========================================
     registerOperator(
-        { piranha::IrBinaryOperator::ADD, &piranha::FundamentalType::IntType, &piranha::FundamentalType::IntType },
+        { piranha::IrBinaryOperator::Operator::Add, &piranha::FundamentalType::IntType, &piranha::FundamentalType::IntType },
         "int_add"
     );
 

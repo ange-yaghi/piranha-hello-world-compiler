@@ -69,7 +69,13 @@ int main() {
 
         // Run the program
         program.execute();
+
+        // Free the program
+        program.free();
     }
+
+    // Free all compiler memory
+    compiler.free();
 
     return 0;
 }

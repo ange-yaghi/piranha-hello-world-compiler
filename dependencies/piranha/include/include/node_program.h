@@ -3,6 +3,7 @@
 
 #include "node_container.h"
 #include "pkey_value_lookup.h"
+#include "ir_compilation_unit.h"
 
 #include <vector>
 
@@ -15,9 +16,16 @@ namespace piranha {
 
     class NodeProgram {
     public:
+        static const bool CheckDuplicates = true;
+
+    public:
         NodeProgram();
         ~NodeProgram();
-        void execute();
+
+        void initialize();
+        void optimize();
+        bool execute();
+        void free();
 
         void writeAssembly(const std::string &fname) const;
 
@@ -31,11 +39,29 @@ namespace piranha {
         void addContainer(IrContextTree *context, NodeContainer *container);
         NodeContainer *getContainer(IrContextTree *context);
 
+        std::string getRuntimeError() const { return m_errorMessage; }
+        void throwRuntimeError(const std::string &msg, Node *node);
+
+        void setRootUnit(IrCompilationUnit *unit) { m_rootUnit = unit; }
+        IrCompilationUnit *getRootUnit() const { return m_rootUnit; }
+
+        void setRootContext(IrContextTree *context) { m_rootContext = context; }
+        IrContextTree *getRootContext() const { return m_rootContext; }
+
     protected:
+        bool m_initialized;
+
+        IrContextTree *m_rootContext;
+        IrCompilationUnit *m_rootUnit;
+
         NodeContainer m_topLevelContainer;
         PKeyValueLookup<IrContextTree, NodeContainer *> m_containers;
 
         std::vector<Node *> m_nodeCache;
+
+        bool m_runtimeError;
+        std::string m_errorMessage;
+        Node *m_errorNode;
     };
 
 } /* namespace piranha */

@@ -1,4 +1,4 @@
-// Auto-generated on: 2019-08-17 17:16:15.934101
+// Auto-generated on: 2020-09-14 01:19:24.964981
 
 #ifndef PIRANHA_PIRANHA_H
 #define PIRANHA_PIRANHA_H
@@ -8,11 +8,11 @@
 #include "include/add_operation_output.h"
 #include "include/assembly.h"
 #include "include/bool_negate_operation.h"
+#include "include/build_settings.h"
 #include "include/channel_node.h"
 #include "include/channel_type.h"
 #include "include/compilation_error.h"
 #include "include/compiler.h"
-#include "include/conf.h"
 #include "include/console_input_node.h"
 #include "include/console_output_node.h"
 #include "include/default_literal_node.h"
@@ -35,6 +35,7 @@
 #include "include/ir_node.h"
 #include "include/ir_node_definition.h"
 #include "include/ir_parser_structure.h"
+#include "include/ir_reference.h"
 #include "include/ir_structure_list.h"
 #include "include/ir_token_info.h"
 #include "include/ir_unary_operator.h"
@@ -46,9 +47,11 @@
 #include "include/literal_node.h"
 #include "include/literal_node_output.h"
 #include "include/memory_management.h"
+#include "include/memory_tracker.h"
 #include "include/multiply_operation_output.h"
 #include "include/node.h"
 #include "include/node_container.h"
+#include "include/node_graph.h"
 #include "include/node_output.h"
 #include "include/node_program.h"
 #include "include/no_op_node.h"
@@ -62,9 +65,11 @@
 #include "include/standard_allocator.h"
 #include "include/string_conversions.h"
 #include "include/subtract_operation_output.h"
+#include "include/throw_runtime_error_node.h"
 #include "include/vector_constructor.h"
 #include "include/vector_output.h"
 #include "include/vector_split.h"
 #include "include/vector_split_node.h"
+#include "include/version.h"
 
 #endif /* PIRANHA_PIRANHA_H */
